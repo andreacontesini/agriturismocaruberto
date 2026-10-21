@@ -1,0 +1,32 @@
+# Exclude OS X folder attributes
+.DS_Store
+
+# Exclude node_modules
+node_modules
+
+# Exclude any PSD/AI source
+*.psd
+*.ai
+
+# Exclude package-lock.json
+# package-lock.json
+
+build/
+
+locale/*.pot
+# Exclude ftp-config.json
+#ftp-config.json
+
+localhostpath.json
+
+.env
+.env.local
+.env.production
+.env.staging
+.env.local.json
+.env.production.json
+.env.staging.json
+*.old
+
+src/scss/main.css
+static_files_name.json

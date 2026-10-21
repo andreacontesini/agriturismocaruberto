@@ -1,0 +1,146 @@
+select:focus,
+input:focus,
+textarea:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus {
+  @apply outline-none bg-primary transition duration-300 border-gray-500;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+.input-text:focus {
+  @apply bg-primary transition duration-300;
+}
+
+input[type="checkbox"]{
+  @apply accent-secondary;
+}
+
+// !! Form beconcept
+.form-beconcept{
+  .form-full-col{
+    @apply w-full space-y-1;
+    p{
+      @apply text-sm text-primary/50;
+    }
+  }
+  .form-two-cols{
+    @apply flex flex-col lg:flex-row lg:space-x-2 space-y-1 lg:space-y-0;
+    & > div{
+      @apply flex-1;
+    }
+  }
+
+  // ! ARROW SELECT
+  select{
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='darkblue' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+    background-size: 1.25rem auto;
+    @apply appearance-none;
+  }
+
+  // ! INPUT
+  @apply space-y-2;
+  input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date], input[type=number], textarea, select, .woocommerce input#coupon_code{
+    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-primary bg-white border border-white rounded-md transition-all duration-300;
+    &:hover{
+      @apply bg-primary/5 border-primary/5;
+    }
+  }
+  input[type=file] {
+    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-primary bg-white border border-white rounded-md transition-all duration-300;
+    &:hover{
+      @apply bg-primary/5 border-primary/5;
+    }
+  }
+
+  & p > span:not(.wpcf7-spinner){
+    @apply relative opacity-100 text-sm;
+    &:first-child{
+      @apply text-primary mt-0;
+    }
+    .wpcf7-not-valid-tip{
+      @apply absolute w-fit bg-transparent text-red-500 right-4 p-0 text-sm leading-none shadow-none bottom-auto flex flex-col justify-center items-center top-0 h-full;
+    }
+  }
+
+  p > br{
+    @apply hidden;
+  }
+
+  .wpcf7-form-control.wpcf7-acceptance{
+    .wpcf7-list-item{
+      @apply ml-0 text-left text-primary font-normal accent-primary text-sm;
+    }
+  }
+
+  // ! PLACEHOLDER
+  select, ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+    @apply text-primary text-opacity-30;
+  }
+
+  
+  // ! BUTTON
+  .form-button-col{
+    @apply w-full;
+    & > p{
+      @apply relative;
+      .wpcf7-spinner{
+        @apply absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-0 bg-secondary bg-opacity-100;
+        &:before{
+          @apply bg-white;
+        }
+      }
+      .wpcf7-submit {
+        @apply w-full flex items-center text-center justify-center bg-primary text-white border-primary transition-all duration-200 hover:text-white hover:border-secondary hover:bg-secondary border border-solid rounded-lg hover:opacity-100 px-8 py-4 text-xs font-inter font-normal tracking-wide uppercase cursor-pointer outline-none focus:outline-none;
+      }
+    }
+  }
+  .wpcf7-list-item{
+    @apply m-0;
+  }
+}
+
+// ! RISPOSTA INVIO
+.wpcf7 form.wpcf7-form .wpcf7-response-output{
+  @apply mx-0 mt-4 w-full border-none text-sm bg-gray-100;
+}
+
+.wpcf7 form .wpcf7-response-output , .wpcf7 div.wpcf7-response-output{
+  @apply py-4 px-4 text-sm text-center;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output{
+  @apply bg-yellow-200 text-yellow-700 rounded-lg;
+}
+
+.wpcf7 form.sent .wpcf7-response-output{
+  @apply bg-green-200 text-green-700 rounded-lg;
+}
+
+.wpcf7-form.submitting{
+  .wpcf7-submit{
+    @apply pointer-events-none;
+    color: transparent !important;
+  }
+}
+
+// DISABLE BUTTON TILL ACCEPTATION
+.wpcf7 .wpcf7-submit:disabled{
+  pointer-events: none !important;
+  opacity: 0.2 !important;
+}
+
+#wpcf7-f988-o1{
+  @apply w-full;
+}

@@ -1,0 +1,14 @@
+.footer-menu-right{
+  .menu{
+    @apply flex items-center lg:justify-end gap-4;
+  }
+}
+.footer-menu-top{
+  @apply w-full lg:w-auto;
+  .menu{
+    @apply flex lg:flex-row flex-col lg:items-center lg:justify-end lg:gap-4 gap-2;
+    li a{
+      @apply text-xl font-bold uppercase font-custom; 
+    }
+  }
+}

@@ -1,0 +1,55 @@
+//COMMON CONTAINERS
+html{
+  @apply overflow-x-clip; 
+}
+.div--container-small{
+  @apply w-full max-w-[1280px] mx-auto lg:px-10 xl:px-16 px-3;
+}
+.div--container{
+  @apply w-full xl:px-16 md:px-8 px-4;
+}
+.div--container-full{
+  @apply w-full px-0;
+}
+section{
+  @apply overflow-x-clip;
+}
+section.space-top , div.space-top{
+  @apply 2xl:pt-40 xl:pt-28 pt-20;
+}
+section.margin-top , div.margin-top{
+  @apply 2xl:mt-40 xl:mt-28 mt-20;
+}
+section.space-top-big , div.space-top-big{
+  @apply 2xl:pt-64 xl:pt-56 pt-32;
+}
+section.space-top-half , div.space-top-half{
+  @apply 2xl:pt-20 xl:pt-20 pt-20;
+}
+section.space-top-less , div.space-top-less{
+  @apply 2xl:pt-8 xl:pt-8 pt-6;
+}
+section.space-bottom , div.space-bottom{
+  @apply 2xl:pb-40 xl:pb-28 pb-20;
+}
+section.space-bottom-half , div.space-bottom-half{
+  @apply 2xl:pb-20 xl:pb-20 pb-20;
+}
+section.space-bottom-less , div.space-bottom-less{
+  @apply 2xl:pb-8 xl:pb-8 pb-6;
+}
+section.space-top-double , div.space-top-double{
+  @apply 2xl:pt-60 xl:pt-48 pt-32;
+}
+section.space-bottom-double , div.space-bottom-double{
+  @apply 2xl:pb-60 xl:pb-48 pb-32;
+}
+.common--grid{
+  @apply grid grid-cols-12 md:gap-6 gap-y-8;
+}
+.common--grid-novert{
+  @apply grid grid-cols-12 md:gap-8 gap-4;
+}
+.check--mobile--order{
+  @apply flex flex-col-reverse md:grid;
+}

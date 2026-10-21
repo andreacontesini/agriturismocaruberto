@@ -1,0 +1,55 @@
+{
+    "themeinfo":{
+        "name": "Agriturismo Caruberto",
+        "author": "91% - Andrea Contesini",
+        "url": "https://andreacontesini.com",
+        "template": ""
+    },
+    "theme_text_domain": "caruberto",
+    "sitemap_name": "sitemap.xml",
+    "paths" : {
+        "assets" : {
+            "folder" : "/assets/",
+            "allfiles" : "assets/**/*"
+        },
+        "src" : {
+            "folder" : "src/",
+            "js" : {
+                "absolute" : "src/js/",
+                "watch" : "src/js/*.js"
+            },
+            "partials" : "src/partials",
+            "scss" : {
+                "folder" : "src/scss/",
+                "entrypoint" : "src/scss/main.scss",
+                "watch" : ["src/scss/**/*.scss","src/scss/*.scss"]
+            },
+            "html" : {
+                "watch": [
+                    "src/**/*.html",
+                    "src/**/*.php",
+                    "src/**/*.xml",
+                    "src/**/*.CSV",
+                    "!src/customposts/*.php",
+                    "!src/shortcodes/*.php",
+                    "!src/DB/*.php",
+                    "!src/vc_components/*.php",
+                    "!src/api/*.php",
+                    "!src/theme_settings/*.php", "!src/functions.php"
+                ]
+            }
+        },
+        "build" : {
+            "injectarray": ["dist/js/*.js", "dist/css/*.css"],
+            "folder" : "build/",
+            "folder_files" : "build/**",
+            "js" : "/dist/js/",
+            "css" : "/dist/css/",
+            "assets" : "/assets",
+            "scss" : {
+                "folder" : "src/scss/",
+                "entrypoint" : "src/scss/main.scss"
+            }
+        }
+    }
+  }

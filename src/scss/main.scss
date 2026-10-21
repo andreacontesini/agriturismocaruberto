@@ -1,0 +1,15 @@
+
+@use "base/tailwind";
+
+//All styles can be added here.
+//BASE
+@use "base/reset";
+@use "base/theme";
+@use "base/typo";
+@use "base/buttons";
+@use "base/animations";
+
+//COMPONENTS
+@use "components/header";
+@use "components/footer";
+@use "components/form";

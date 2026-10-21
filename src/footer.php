@@ -1,0 +1,13 @@
+<footer class="">
+  <div class="div--container">
+  <?php //get_template_part( 'template-parts/footer/footer','main' );?>
+  <?php //get_template_part( 'template-parts/footer/footer','bottom' );?>
+  </div>
+</footer>
+<?php wp_footer(); ?>
+<script src="<?php echo (get_stylesheet_directory_uri()); ?>/assets/vendors/aos/aos.js"></script>
+<script> AOS.init(); </script>
+<script src="<?php echo (get_stylesheet_directory_uri()); ?>/assets/vendors/swiper/swiper-bundle-v11.min.js"></script>
+<script defer="defer" src="<?php echo (get_stylesheet_directory_uri()); ?>/dist/js/###main_js_filename###"></script>
+</body>
+</html>

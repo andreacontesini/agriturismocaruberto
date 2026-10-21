@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Circular";
+  src: url("/wp-content/themes/montipadel/assets/font/circular/book/CircularStd-Book.woff2")
+      format("woff2"),
+    url("/wp-content/themes/montipadel/assets/font/circular/book/CircularStd-Book.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("/wp-content/themes/montipadel/assets/font/circular/book/CircularStd-BookItalic.woff2")
+      format("woff2"),
+      url("/wp-content/themes/montipadel/assets/font/circular/book/CircularStd-BookItalic.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+html,
+body {
+  @apply font-inter font-normal;
+}
+.p{
+  @apply text-base font-inter;
+  p{
+    @apply text-base font-inter;
+  }
+  p + p{
+    @apply pt-4;
+  }
+  b, strong {
+    @apply font-bold;
+  }
+  a{
+    @apply underline;
+  }
+  ul{
+    @apply list-inside list-disc;
+  }
+}
+.h1 {
+  @apply font-inter font-semibold lg:text-8xl text-6xl;
+}
+.h2 {
+  @apply font-inter font-semibold lg:text-7xl text-5xl;
+}
+.h3 {
+  @apply font-inter font-semibold lg:text-6xl text-4xl;
+}
+.h4 {
+  @apply font-inter font-semibold lg:text-4xl text-2xl;
+}
+.h5 {
+  @apply font-inter font-semibold lg:text-2xl text-xl uppercase;
+}
+.h6 {
+  @apply font-inter font-semibold text-sm uppercase;
+}
+p + p{
+  @apply pt-4;
+}
+form{
+  p + p{
+    @apply pt-0;
+  }
+}
