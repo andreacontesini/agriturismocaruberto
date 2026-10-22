@@ -6,7 +6,8 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'inter': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+      'radio': ['RadioGrotesk', 'Helvetica', 'Arial', 'sans-serif'],
+      'naveid': ['Naveid', 'Helvetica', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {

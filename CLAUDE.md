@@ -127,7 +127,7 @@ Nei template PHP copiati (tutto `src/` tranne i file concatenati in `functions.p
 
 ### Tailwind
 
-`tailwind.config.js` scansiona `src/**/*.{php,js,html}`: le classi costruite dinamicamente (concatenazioni di stringhe) vanno aggiunte a `safelist`. Colori custom: `primary` `#0B6087`, `secondary` `#fe8944`; font `font-inter`, `font-custom`.
+`tailwind.config.js` scansiona `src/**/*.{php,js,html}`: le classi costruite dinamicamente (concatenazioni di stringhe) vanno aggiunte a `safelist`. Colori custom: `primary` `#0B6087`, `secondary` `#fe8944`; font `font-radio`, `font-custom`.
 
 ### Ordine file JavaScript
 

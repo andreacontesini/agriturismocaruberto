@@ -6,7 +6,7 @@
   @apply flex flex-col gap-2;
 }
 .btn{
-  @apply font-inter font-medium w-fit transition-all duration-200 text-sm px-8 py-4 rounded-sm outline-none focus:outline-none flex items-center text-center h-fit justify-center cursor-pointer border border-solid hover:opacity-100 gap-1;
+  @apply font-radio font-medium w-fit transition-all duration-200 text-sm px-8 py-4 rounded-sm outline-none focus:outline-none flex items-center text-center h-fit justify-center cursor-pointer border border-solid hover:opacity-100 gap-1;
   text-decoration: none !important;
   &.btn-fill-white{
     @apply border-gray-100 text-black bg-white hover:opacity-75 ;

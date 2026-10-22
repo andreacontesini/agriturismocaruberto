@@ -102,7 +102,7 @@ input[type="checkbox"]{
         }
       }
       .wpcf7-submit {
-        @apply w-full flex items-center text-center justify-center bg-one text-white border-one transition-all duration-200 hover:text-white hover:border-two hover:bg-two border border-solid rounded-lg hover:opacity-100 px-8 py-4 text-xs font-inter font-normal tracking-wide uppercase cursor-pointer outline-none focus:outline-none;
+        @apply w-full flex items-center text-center justify-center bg-one text-white border-one transition-all duration-200 hover:text-white hover:border-two hover:bg-two border border-solid rounded-lg hover:opacity-100 px-8 py-4 text-xs font-radio font-normal tracking-wide uppercase cursor-pointer outline-none focus:outline-none;
       }
     }
   }
