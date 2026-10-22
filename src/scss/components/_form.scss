@@ -1,36 +1,20 @@
-select:focus,
-input:focus,
-textarea:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus {
-  @apply outline-none bg-one transition duration-300 border-gray-500;
-}
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-.input-text:focus {
-  @apply bg-one transition duration-300;
-}
+// =============================================================================
+// !! FORM BECONCEPT
+// Struttura e layout comuni. I colori sono definiti nelle varianti:
+//   .form-beconcept.light → elementi chiari, per sfondi scuri (es. bg-five)
+//   .form-beconcept.dark  → elementi scuri, per sfondi chiari
+// =============================================================================
 
-input[type="checkbox"]{
-  @apply accent-two;
-}
+$form-fields: 'input[type=text], input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date], input[type=number], textarea, select, .woocommerce input#coupon_code';
 
-// !! Form beconcept
 .form-beconcept{
+  @apply space-y-2;
+
+  // ! LAYOUT
   .form-full-col{
     @apply w-full space-y-1;
     p{
-      @apply text-sm text-one/50;
+      @apply text-sm;
     }
   }
   .form-two-cols{
@@ -39,103 +23,160 @@ input[type="checkbox"]{
       @apply flex-1;
     }
   }
-
-  // ! ARROW SELECT
-  select{
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='darkblue' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
-    background-repeat: no-repeat;
-    background-position: right 0.5rem top 50%;
-    background-size: 1.25rem auto;
-    @apply appearance-none;
+  .form-button-col{
+    @apply w-full;
+  }
+  p > br{
+    @apply hidden;
   }
 
   // ! INPUT
-  @apply space-y-2;
-  input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date], input[type=number], textarea, select, .woocommerce input#coupon_code{
-    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-one bg-white border border-white rounded-md transition-all duration-300;
-    &:hover{
-      @apply bg-one/5 border-one/5;
-    }
-  }
-  input[type=file] {
-    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-one bg-white border border-white rounded-md transition-all duration-300;
-    &:hover{
-      @apply bg-one/5 border-one/5;
-    }
+  #{$form-fields}{
+    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[54px] border border-solid outline-none transition-all duration-300;
   }
 
+  // ! ERRORI DI VALIDAZIONE
   & p > span:not(.wpcf7-spinner){
     @apply relative opacity-100 text-sm;
     &:first-child{
-      @apply text-one mt-0;
+      @apply mt-0;
     }
     .wpcf7-not-valid-tip{
       @apply absolute w-fit bg-transparent text-red-500 right-4 p-0 text-sm leading-none shadow-none bottom-auto flex flex-col justify-center items-center top-0 h-full;
     }
   }
 
-  p > br{
-    @apply hidden;
-  }
-
-  .wpcf7-form-control.wpcf7-acceptance{
-    .wpcf7-list-item{
-      @apply ml-0 text-left text-one font-normal accent-one text-sm;
-    }
-  }
-
-  // ! PLACEHOLDER
-  select, ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-    @apply text-one text-opacity-30;
-  }
-
-
-  // ! BUTTON
-  .form-button-col{
-    @apply w-full;
-    & > p{
-      @apply relative;
-      .wpcf7-spinner{
-        @apply absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-0 bg-two bg-opacity-100;
-        &:before{
-          @apply bg-white;
-        }
-      }
-      .wpcf7-submit {
-        @apply w-full flex items-center text-center justify-center bg-one text-white border-one transition-all duration-200 hover:text-white hover:border-two hover:bg-two border border-solid rounded-lg hover:opacity-100 px-8 py-4 text-xs font-radio font-normal tracking-wide uppercase cursor-pointer outline-none focus:outline-none;
-      }
-    }
-  }
+  // ! ACCEPTANCE
   .wpcf7-list-item{
     @apply m-0;
   }
-}
+  .wpcf7-form-control.wpcf7-acceptance .wpcf7-list-item{
+    @apply ml-0 text-left font-normal text-sm;
+  }
 
-// ! RISPOSTA INVIO
-.wpcf7 form.wpcf7-form .wpcf7-response-output{
-  @apply mx-0 mt-4 w-full border-none text-sm bg-gray-100;
-}
+  // ! BUTTON
+  .form-button-col > p{
+    @apply relative;
+    .wpcf7-spinner{
+      @apply absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-0 bg-opacity-100;
+    }
+    .wpcf7-submit{
+      @apply w-full flex items-center text-center justify-center border border-solid rounded-none px-8 py-4 text-sm font-radio font-normal uppercase cursor-pointer outline-none focus:outline-none hover:opacity-100 transition-all duration-200;
+    }
+  }
 
-.wpcf7 form .wpcf7-response-output , .wpcf7 div.wpcf7-response-output{
-  @apply py-4 px-4 text-sm text-center;
-}
+  // ===========================================================================
+  // ! VARIANTE LIGHT — elementi chiari su sfondo scuro
+  // ===========================================================================
+  &.light{
+    @apply text-one;
 
-.wpcf7 form.invalid .wpcf7-response-output{
-  @apply bg-yellow-200 text-yellow-700 rounded-lg;
-}
+    .form-full-col p{
+      @apply text-one/70;
+    }
 
-.wpcf7 form.sent .wpcf7-response-output{
-  @apply bg-green-200 text-green-700 rounded-lg;
-}
+    #{$form-fields}{
+      @apply text-one bg-transparent border-one/30;
+      &:hover{
+        @apply border-one/60;
+      }
+      &:focus{
+        @apply bg-one/5 border-one;
+      }
+    }
+    select option{
+      @apply text-three bg-white;
+    }
+    ::placeholder{
+      @apply text-one/50;
+    }
 
-.wpcf7-form.submitting{
-  .wpcf7-submit{
-    @apply pointer-events-none;
-    color: transparent !important;
+    & p > span:not(.wpcf7-spinner):first-child{
+      @apply text-one;
+    }
+    .wpcf7-acceptance .wpcf7-list-item{
+      @apply text-one accent-one;
+    }
+
+    .wpcf7-spinner{
+      @apply bg-black;
+      &:before{
+        @apply bg-one;
+      }
+    }
+    .wpcf7-submit{
+      @apply bg-one text-five border-one hover:bg-two hover:border-two hover:text-five;
+    }
+  }
+
+  // ===========================================================================
+  // ! VARIANTE DARK — elementi scuri su sfondo chiaro
+  // ===========================================================================
+  &.dark{
+    @apply text-three;
+
+    .form-full-col p{
+      @apply text-three/70;
+    }
+
+    #{$form-fields}{
+      @apply text-three bg-white border-three/20;
+      &:hover{
+        @apply border-three/50;
+      }
+      &:focus{
+        @apply bg-one/20 border-three;
+      }
+    }
+    ::placeholder{
+      @apply text-three/40;
+    }
+
+    & p > span:not(.wpcf7-spinner):first-child{
+      @apply text-three;
+    }
+    .wpcf7-acceptance .wpcf7-list-item{
+      @apply text-three accent-three;
+    }
+
+    .wpcf7-spinner{
+      @apply bg-one;
+      &:before{
+        @apply bg-black;
+      }
+    }
+    .wpcf7-submit{
+      @apply bg-three text-one border-three hover:bg-two hover:border-two hover:text-white;
+    }
   }
 }
 
-// DISABLE BUTTON TILL ACCEPTATION
+// =============================================================================
+// !! CONTACT FORM 7 — stati globali
+// =============================================================================
+
+// ! RISPOSTA INVIO
+.wpcf7 form .wpcf7-response-output,
+.wpcf7 div.wpcf7-response-output{
+  @apply py-2 px-2 text-sm text-center;
+}
+.wpcf7 form.wpcf7-form .wpcf7-response-output{
+  @apply mx-0 mt-2 w-full border-none bg-gray-100;
+}
+.wpcf7 form.invalid .wpcf7-response-output{
+  @apply bg-yellow-200 text-yellow-700 rounded-none;
+}
+.wpcf7 form.sent .wpcf7-response-output{
+  @apply bg-green-200 text-green-700 rounded-none;
+}
+
+// ! INVIO IN CORSO
+.wpcf7-form.submitting .wpcf7-submit{
+  @apply pointer-events-none;
+  color: transparent !important;
+}
+
+// ! BUTTON DISABILITATO FINO ALL'ACCETTAZIONE
 .wpcf7 .wpcf7-submit:disabled{
   pointer-events: none !important;
   opacity: 0.2 !important;

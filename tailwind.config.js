@@ -15,6 +15,7 @@ module.exports = {
         'two': '#C99E67',
         'three': '#443025',
         'four': '#787050',
+        'five': '#51141e',
       },
     }
   },
