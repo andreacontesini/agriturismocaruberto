@@ -6,7 +6,7 @@ global $wp, $wpdb;
 <?php if ( ! post_password_required( $post ) ) { ?>
 <div class="page--container lg:h-screen min-h-screen antialiased overflow-hidden flex overflow-x-clip bg-five text-one p-5">
   <div class="border border-solid overflow-hidden border-one/20 min-h-[100%] w-full flex items-center justify-center">
-    <div data-aos="fade-in" data-aos-delay="400" class="col-span-12 lg:col-span-6 lg:col-start-4 p-4 space-top space-bottom">
+    <div data-aos="fade-up-short" data-aos-delay="400" data-aos-duration="1400" class="col-span-12 lg:col-span-6 lg:col-start-4 p-4 space-top space-bottom">
       <div class="max-w-[640px] space-y-12">
         <div class="space-y-10">
           <div class="max-w-[220px] mx-auto">

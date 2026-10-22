@@ -88,7 +88,7 @@ Non c'è una cartella `src/woocommerce/`: WooCommerce/WPML non risultano ancora 
 
 Non passano da `wp_enqueue_*` (tranne jQuery): sono tag hardcodati nei template.
 - **jQuery 3.6.4** — `src/functions.php` deregistra quello di WP e registra `assets/js/jquery.3.6.4.min.js` (footer, solo frontend)
-- **Swiper v11** e **AOS** — CSS in `src/header.php`, JS in `src/footer.php` (`AOS.init()` inline), da `assets/vendors/`
+- **Swiper v11** e **AOS** — CSS in `src/header.php`, JS in `src/footer.php` (`AOS.init()` con le opzioni del tema in `src/js/00_aos-beconcept.js` — non aggiungere init inline), da `assets/vendors/`
 - **Font**: Google Fonts Inter + Material Symbols Outlined in `src/header.php`
 - **GSAP non è presente** nello stack: se serve, aggiungerlo in `assets/vendors/` seguendo lo stesso pattern
 - Il bundle `dist/js/###main_js_filename###` è caricato con `defer` in `footer.php`, dopo Swiper/AOS
