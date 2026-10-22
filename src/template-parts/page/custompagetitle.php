@@ -1,5 +1,5 @@
 
-<?php 
+<?php
   $page_for_posts = get_option( 'page_for_posts' );
   if( is_home() && !is_single() ) {
     $activate_pagetitle = get_field('activate_pagetitle' , $page_for_posts, true);
@@ -7,7 +7,7 @@
   }
   $our_title = get_the_title( get_option('page_for_posts', true) );
 ?>
-<section id="page-title" class="relative overflow-clip flex flex-col justify-center bg-primary text-white space-top space-bottom">
+<section id="page-title" class="relative overflow-clip flex flex-col justify-center bg-one text-white space-top space-bottom">
   <div class="div--container z-30 relative xl:space-y-3 space-y-2">
     <div class="btn-container w-full justify-center pb-6">
       <a href="<?php echo get_site_url(); ?>" class="btn outline-white">

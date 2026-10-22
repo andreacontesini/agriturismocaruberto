@@ -14,11 +14,11 @@
   &.btn-fill-black{
     @apply border-black text-white bg-black hover:opacity-75 ;
   }
-  &.btn-fill-primary{
-    @apply border-primary text-white bg-primary hover:opacity-75 ;
+  &.btn-fill-one{
+    @apply border-one text-white bg-one hover:opacity-75 ;
   }
-  &.btn-fill-secondary{
-    @apply border-secondary bg-secondary text-black hover:opacity-75;
+  &.btn-fill-two{
+    @apply border-two bg-two text-black hover:opacity-75;
   }
   &.btn-outline-white{
     @apply border-white bg-transparent text-white hover:bg-white hover:text-black;
@@ -26,11 +26,11 @@
   &.btn-outline-black{
     @apply border-black bg-transparent text-black hover:bg-black hover:text-white;
   }
-  &.btn-outline-primary{
-    @apply border-primary bg-transparent text-primary hover:bg-primary hover:text-white;
+  &.btn-outline-one{
+    @apply border-one bg-transparent text-one hover:bg-one hover:text-white;
   }
-  &.btn-outline-secondary{
-    @apply border-secondary bg-transparent text-secondary hover:bg-secondary hover:text-black;
+  &.btn-outline-two{
+    @apply border-two bg-transparent text-two hover:bg-two hover:text-black;
   }
 }
 .be-button-prev , .be-button-next{

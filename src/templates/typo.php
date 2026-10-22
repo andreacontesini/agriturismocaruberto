@@ -80,11 +80,11 @@ $pagecontent = get_field('contenuto_pagina');
                 </svg>
               </div>
             </div>
-            
+
             <div class="space-y-2">
               <div class="space-y-2">
                 <p>Base colors and Inter font</p>
-                <div class="h-[1px] bg-primary block w-full"></div>
+                <div class="h-[1px] bg-one block w-full"></div>
               </div>
               <div class="space-y-2">
                 <h1 class="h1">This is a H1 title</h1>
@@ -95,7 +95,7 @@ $pagecontent = get_field('contenuto_pagina');
                 <h6 class="h6">This is a H5 title</h6>
               </div>
               <p class="p max-w-[960px] mt-4">Un giorno però accadde che la piccola riga di un testo casuale, di nome Lorem ipsum, decise di andare a esplorare la vasta Grammatica. Il grande Oximox tentò di dissuaderla, poiché quel luogo pullulava di virgole spietate, punti interrogativi selvaggi e subdoli punti e virgola, ma il piccolo testo casuale non si fece certo fuorviare. Raccolse le sue sette maiuscole, fece scorrere la sua iniziale nella cintura, e si mise in cammino. Quando superò i primi colli dei monti Corsivi, si voltò a guardare un’ultima volta la skyline di Lettere, la sua città, la headline del villaggio Alfabeto e la subline della sua stessa strada, il vicolo Riga. Una domanda retorica</p>
-            
+
               <div class="btn-container mt-10">
                 <a class="btn btn-fill-white">
                   <span>Fill white</span>
@@ -105,11 +105,11 @@ $pagecontent = get_field('contenuto_pagina');
                   <span>Fill black</span>
                   <span class="be-icon material-symbols-outlined">arrow_forward</span>
                 </a>
-                <a class="btn btn-fill-primary">
+                <a class="btn btn-fill-one">
                   <span>Fill primary</span>
                   <span class="be-icon material-symbols-outlined">arrow_forward</span>
                 </a>
-                <a class="btn btn-fill-secondary">
+                <a class="btn btn-fill-two">
                   <span>Fill secondary</span>
                   <span class="be-icon material-symbols-outlined">arrow_forward</span>
                 </a>
@@ -121,18 +121,18 @@ $pagecontent = get_field('contenuto_pagina');
                   <span>Outline black</span>
                   <span class="be-icon material-symbols-outlined">arrow_forward</span>
                 </a>
-                <a class="btn btn-outline-primary">
+                <a class="btn btn-outline-one">
                   <span>Outline primary</span>
                   <span class="be-icon material-symbols-outlined">arrow_forward</span>
                 </a>
-                <a class="btn btn-outline-secondary">
+                <a class="btn btn-outline-two">
                   <span>Outline secondary</span>
                   <span class="be-icon material-symbols-outlined">arrow_forward</span>
                 </a>
               </div>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     </div>
 

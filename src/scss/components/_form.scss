@@ -8,7 +8,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus {
-  @apply outline-none bg-primary transition duration-300 border-gray-500;
+  @apply outline-none bg-one transition duration-300 border-gray-500;
 }
 input[type="text"]:focus,
 input[type="number"]:focus,
@@ -18,11 +18,11 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 .input-text:focus {
-  @apply bg-primary transition duration-300;
+  @apply bg-one transition duration-300;
 }
 
 input[type="checkbox"]{
-  @apply accent-secondary;
+  @apply accent-two;
 }
 
 // !! Form beconcept
@@ -30,7 +30,7 @@ input[type="checkbox"]{
   .form-full-col{
     @apply w-full space-y-1;
     p{
-      @apply text-sm text-primary/50;
+      @apply text-sm text-one/50;
     }
   }
   .form-two-cols{
@@ -52,22 +52,22 @@ input[type="checkbox"]{
   // ! INPUT
   @apply space-y-2;
   input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date], input[type=number], textarea, select, .woocommerce input#coupon_code{
-    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-primary bg-white border border-white rounded-md transition-all duration-300;
+    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-one bg-white border border-white rounded-md transition-all duration-300;
     &:hover{
-      @apply bg-primary/5 border-primary/5;
+      @apply bg-one/5 border-one/5;
     }
   }
   input[type=file] {
-    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-primary bg-white border border-white rounded-md transition-all duration-300;
+    @apply font-normal text-sm leading-snug py-3 px-4 w-full min-h-[40px] text-one bg-white border border-white rounded-md transition-all duration-300;
     &:hover{
-      @apply bg-primary/5 border-primary/5;
+      @apply bg-one/5 border-one/5;
     }
   }
 
   & p > span:not(.wpcf7-spinner){
     @apply relative opacity-100 text-sm;
     &:first-child{
-      @apply text-primary mt-0;
+      @apply text-one mt-0;
     }
     .wpcf7-not-valid-tip{
       @apply absolute w-fit bg-transparent text-red-500 right-4 p-0 text-sm leading-none shadow-none bottom-auto flex flex-col justify-center items-center top-0 h-full;
@@ -80,29 +80,29 @@ input[type="checkbox"]{
 
   .wpcf7-form-control.wpcf7-acceptance{
     .wpcf7-list-item{
-      @apply ml-0 text-left text-primary font-normal accent-primary text-sm;
+      @apply ml-0 text-left text-one font-normal accent-one text-sm;
     }
   }
 
   // ! PLACEHOLDER
   select, ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-    @apply text-primary text-opacity-30;
+    @apply text-one text-opacity-30;
   }
 
-  
+
   // ! BUTTON
   .form-button-col{
     @apply w-full;
     & > p{
       @apply relative;
       .wpcf7-spinner{
-        @apply absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-0 bg-secondary bg-opacity-100;
+        @apply absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-0 bg-two bg-opacity-100;
         &:before{
           @apply bg-white;
         }
       }
       .wpcf7-submit {
-        @apply w-full flex items-center text-center justify-center bg-primary text-white border-primary transition-all duration-200 hover:text-white hover:border-secondary hover:bg-secondary border border-solid rounded-lg hover:opacity-100 px-8 py-4 text-xs font-inter font-normal tracking-wide uppercase cursor-pointer outline-none focus:outline-none;
+        @apply w-full flex items-center text-center justify-center bg-one text-white border-one transition-all duration-200 hover:text-white hover:border-two hover:bg-two border border-solid rounded-lg hover:opacity-100 px-8 py-4 text-xs font-inter font-normal tracking-wide uppercase cursor-pointer outline-none focus:outline-none;
       }
     }
   }

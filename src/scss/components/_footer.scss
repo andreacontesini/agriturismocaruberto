@@ -8,7 +8,7 @@
   .menu{
     @apply flex lg:flex-row flex-col lg:items-center lg:justify-end lg:gap-4 gap-2;
     li a{
-      @apply text-xl font-bold uppercase font-custom; 
+      @apply text-xl font-bold uppercase;
     }
   }
 }

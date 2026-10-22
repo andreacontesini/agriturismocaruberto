@@ -7,12 +7,13 @@ module.exports = {
   theme: {
     fontFamily: {
       'inter': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-      'custom': ['Circular', 'Helvetica', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {
-        'primary': '#0B6087',
-        'secondary': '#fe8944',
+        'one': '#E9D7B8',
+        'two': '#C99E67',
+        'three': '#443025',
+        'four': '#787050',
       },
     }
   },

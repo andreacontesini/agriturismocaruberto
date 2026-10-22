@@ -33,11 +33,11 @@ input[name="your-email"]{
   @apply lowercase;
 }
 input[type="checkbox"]{
-  @apply accent-primary;
+  @apply accent-one;
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
     -webkit-text-fill-color: white;
     color:white;
