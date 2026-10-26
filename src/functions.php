@@ -6,7 +6,5 @@
     wp_enqueue_script('jquery');
   }
   if (!is_admin()) add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
-  
-  //includo le interfaccie admin custom
-  include_once(get_stylesheet_directory() . '/admin/init.admin.php');
+
 ?>
