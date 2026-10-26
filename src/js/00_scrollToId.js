@@ -20,11 +20,13 @@ jQuery(document).ready(function( $ ){
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
           if ($(this).data('offset') != undefined) offset = $(this).data('offset');
+          if (window.beLenis) {
+            window.beLenis.scrollTo(target[0], { offset: -offset, duration: 1.5 });
+          } else {
             $('html, body').stop().animate({
               'scrollTop': $(target).offset().top - offset
-            }, 1500, 'swing', function()  {
-            
-          });
+            }, 1500, 'swing');
+          }
         }
       }
     });

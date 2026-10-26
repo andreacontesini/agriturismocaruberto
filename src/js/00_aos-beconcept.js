@@ -20,17 +20,11 @@ jQuery(document).ready(function($){
 	});
 });
 
-// Forza il refresh dopo il caricamento completo della pagina
-$(window).on('load', function() {
-AOS.refresh();
-	if (typeof ScrollTrigger !== 'undefined') {
-	  ScrollTrigger.refresh();
-	}
-});
-
-// Mantiene aggiornato AOS (e ScrollTrigger se presente) su resize/scroll
-$(window).on('resize scroll', function() {
-AOS.refresh();
+// Forza il refresh dopo il caricamento completo della pagina.
+// Scroll e resize sono già gestiti internamente da AOS (con throttle/debounce):
+// non serve chiamare AOS.refresh() ad ogni evento, con Lenis lo scroll scatta ad ogni frame.
+jQuery(window).on('load', function() {
+	AOS.refresh();
 	if (typeof ScrollTrigger !== 'undefined') {
 	  ScrollTrigger.refresh();
 	}
